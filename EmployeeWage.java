@@ -1,19 +1,19 @@
 Welcome to Employee Wage Computation Program
 public class EmployeeWage 
 {
-	//Constants
+//Constants
 	public static final	int IS_PART_TIME = 1;
 	public static final	int IS_FULL_TIME = 2;
 	public static final	int EMP_PER_RATE_HOUR = 20;
 	public static final	int NUM_OF_WORKING_DAYS = 20;
 	public static final	int MAX_HRS_IN_MONTH = 100;
 
-	public static void main(String[] args) 
+	public static int computeEmpWage()
 	{
 		//Variables
 		int empHrs=0, totalEmpWage=0, totalEmpHrs=0, totalWorkingDays=0;
 
-		//Computation and total working days per month
+		//Computation 
 		while(totalEmpHrs < MAX_HRS_IN_MONTH && totalWorkingDays < NUM_OF_WORKING_DAYS)
 		{
 			totalWorkingDays++;	
@@ -35,5 +35,11 @@ public class EmployeeWage
 		}
 		totalEmpWage = totalEmpHrs * NUM_OF_WORKING_DAYS;
 		System.out.println("Total Employee Wage = "+totalEmpWage);
+		return totalEmpWage;
+	}
+
+	public static void main(String[] args) 
+	{
+		computeEmpWage();
 	}
 }
